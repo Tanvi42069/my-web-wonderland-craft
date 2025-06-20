@@ -1,12 +1,16 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Linkedin } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
     "Leadership", "Project Management", "Strategic Planning", "Team Building",
     "Communication", "Problem Solving", "Creative Thinking", "Innovation"
   ];
+
+  const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
     <section id="about" className="py-20 px-6 bg-white">
@@ -33,10 +37,20 @@ const AboutSection = () => {
                   and driving meaningful change. My journey has been shaped by curiosity, 
                   continuous learning, and a commitment to excellence.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   With a strong foundation in strategic thinking and creative problem-solving, 
                   I thrive in environments that challenge me to grow and contribute to impactful projects.
                 </p>
+                <a 
+                  href={linkedInUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                    <Linkedin className="mr-2" size={16} />
+                    Connect with me
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -82,7 +96,7 @@ const AboutSection = () => {
                 <CardTitle className="text-xl text-gray-800">Skills & Expertise</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {skills.map((skill, index) => (
                     <Badge 
                       key={index} 
@@ -93,6 +107,16 @@ const AboutSection = () => {
                     </Badge>
                   ))}
                 </div>
+                <a 
+                  href={linkedInUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+                    <Linkedin className="mr-2" size={16} />
+                    View Full Profile
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </div>

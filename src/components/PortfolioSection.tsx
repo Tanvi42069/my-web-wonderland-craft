@@ -50,6 +50,8 @@ const PortfolioSection = () => {
     }
   ];
 
+  const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
+
   return (
     <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-6xl mx-auto">
@@ -102,13 +104,20 @@ const PortfolioSection = () => {
                   ))}
                 </div>
                 
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300"
+                <a 
+                  href={linkedInUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
                 >
-                  <FileText className="mr-2" size={16} />
-                  Learn More
-                </Button>
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300"
+                  >
+                    <FileText className="mr-2" size={16} />
+                    View on LinkedIn
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
@@ -124,7 +133,7 @@ const PortfolioSection = () => {
             </CardHeader>
             <CardContent>
               <a 
-                href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" 
+                href={linkedInUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
