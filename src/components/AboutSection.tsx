@@ -70,8 +70,8 @@ const AboutSection = () => {
           <div className="space-y-6">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=600&q=80" 
-                alt="Professional workspace" 
+                src="/lovable-uploads/4dd48587-f504-4c20-9c1a-92c32f9eb1d0.png" 
+                alt="Tanvi Bokade - Professional Portrait" 
                 className="w-full h-80 object-cover rounded-2xl shadow-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>

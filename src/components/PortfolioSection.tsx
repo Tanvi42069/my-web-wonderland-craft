@@ -7,32 +7,46 @@ import { Briefcase, FileText } from "lucide-react";
 const PortfolioSection = () => {
   const projects = [
     {
-      title: "Strategic Initiative Leadership",
-      description: "Led cross-functional teams to deliver high-impact projects that drove organizational growth and efficiency improvements.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-      tags: ["Leadership", "Strategy", "Team Management", "Project Delivery"],
+      title: "Leadership & Public Speaking",
+      description: "Delivering impactful presentations and leading initiatives at MIT Art, Design & Technology University. Demonstrating strong communication and leadership skills in academic and professional settings.",
+      image: "/lovable-uploads/fd5de28a-cc60-490c-9d30-577af53d49cd.png",
+      tags: ["Public Speaking", "Leadership", "Communication", "Academic Excellence"],
       category: "Leadership"
     },
     {
-      title: "Process Innovation & Optimization",
-      description: "Designed and implemented innovative solutions that streamlined operations and enhanced productivity across multiple departments.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-      tags: ["Process Improvement", "Innovation", "Efficiency", "Analysis"],
+      title: "Team Collaboration & Innovation",
+      description: "Working collaboratively with diverse teams on technology projects and innovation initiatives. Fostering teamwork and driving collective success through effective coordination and shared vision.",
+      image: "/lovable-uploads/a0c1cc61-6250-4a1e-8560-a5b826d7928c.png",
+      tags: ["Team Collaboration", "Innovation", "Technology", "Project Management"],
       category: "Innovation"
     },
     {
-      title: "Collaborative Team Building",
-      description: "Facilitated team development initiatives that improved collaboration, communication, and overall performance metrics.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-      tags: ["Team Building", "Communication", "Performance", "Development"],
-      category: "Team Development"
+      title: "Community Service & Social Impact",
+      description: "Actively participating in National Service Scheme initiatives and community outreach programs. Demonstrating commitment to social responsibility and making a positive impact in the community.",
+      image: "/lovable-uploads/83597ca6-981d-49db-86d6-6d106e5c2e43.png",
+      tags: ["Community Service", "Social Impact", "Volunteerism", "Leadership"],
+      category: "Social Impact"
     },
     {
-      title: "Data-Driven Decision Making",
-      description: "Developed analytical frameworks and reporting systems that enabled informed decision-making and strategic planning.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-      tags: ["Analytics", "Data Analysis", "Reporting", "Strategic Planning"],
-      category: "Analytics"
+      title: "Professional Recognition & Achievement",
+      description: "Receiving recognition and awards for outstanding performance and contributions. Consistently demonstrating excellence in academic and professional endeavors.",
+      image: "/lovable-uploads/20b443da-f1f3-430c-b003-437ed3ea8013.png",
+      tags: ["Achievement", "Recognition", "Excellence", "Professional Growth"],
+      category: "Achievement"
+    },
+    {
+      title: "Academic Excellence & Certification",
+      description: "Achieving academic milestones and earning certifications that demonstrate commitment to continuous learning and professional development.",
+      image: "/lovable-uploads/ca9525cf-8121-4d92-9ce2-eacc0d28b894.png",
+      tags: ["Academic Excellence", "Certification", "Learning", "Development"],
+      category: "Education"
+    },
+    {
+      title: "Strategic Partnerships & Networking",
+      description: "Building strategic relationships and partnerships with industry leaders and academic institutions. Fostering connections that drive mutual growth and collaboration.",
+      image: "/lovable-uploads/13eceb2a-818b-4a30-ad29-1c13191fd1a4.png",
+      tags: ["Strategic Partnerships", "Networking", "Collaboration", "Relationship Building"],
+      category: "Networking"
     }
   ];
 
