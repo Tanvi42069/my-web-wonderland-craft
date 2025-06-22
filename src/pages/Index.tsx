@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -45,7 +46,7 @@ const Index = () => {
               Tanvi Bokade
             </h1>
             <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full opacity-20 animate-pulse overflow-hidden">
-              <img alt="Tanvi Bokade" className="w-full h-full object-cover rounded-full" src="/lovable-uploads/134eef95-0cef-4ed8-baa7-709a1058beec.jpg" />
+              <img alt="Tanvi Bokade" className="w-full h-full object-cover rounded-full" src="/lovable-uploads/36a01f04-22cf-4253-a498-df6bf818ad95.png" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
           </div>
