@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -5,8 +6,9 @@ import { Linkedin } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
-    "Leadership", "Project Management", "Strategic Planning", "Team Building",
-    "Communication", "Problem Solving", "Creative Thinking", "Innovation"
+    "Product Strategy", "User Research", "Data Analysis", "Agile/Scrum",
+    "Stakeholder Management", "Product Roadmapping", "A/B Testing", "Market Research",
+    "Cross-functional Leadership", "Product Analytics", "User Experience Design", "Go-to-Market Strategy"
   ];
 
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
@@ -25,20 +27,21 @@ const AboutSection = () => {
           <div className="space-y-6">
             <Card className="border-0 bg-gradient-to-br from-blue-50 to-purple-50 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800">Professional Journey</CardTitle>
+                <CardTitle className="text-2xl text-gray-800">Product Management Journey</CardTitle>
                 <CardDescription className="text-gray-600">
-                  Driven by passion and purpose
+                  Building products that matter
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  I am a dedicated professional with a passion for creating innovative solutions 
-                  and driving meaningful change. My journey has been shaped by curiosity, 
-                  continuous learning, and a commitment to excellence.
+                  As an aspiring Product Manager, I bring a unique blend of strategic thinking, 
+                  user-centric design, and data-driven decision making. My experience spans 
+                  product strategy, user research, and cross-functional team leadership.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  With a strong foundation in strategic thinking and creative problem-solving, 
-                  I thrive in environments that challenge me to grow and contribute to impactful projects.
+                  I excel at translating customer needs into actionable product requirements, 
+                  managing product roadmaps, and driving successful product launches through 
+                  collaborative stakeholder management and agile methodologies.
                 </p>
                 <a 
                   href={linkedInUrl} 
@@ -55,25 +58,25 @@ const AboutSection = () => {
 
             <Card className="border-0 bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-800">Core Values</CardTitle>
+                <CardTitle className="text-xl text-gray-800">Product Management Principles</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    Excellence in everything I do
+                    Customer-first product development
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                    Continuous learning and growth
+                    Data-driven decision making
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-pink-600 rounded-full"></div>
-                    Collaborative and inclusive approach
+                    Agile and iterative approach
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-indigo-600 rounded-full"></div>
-                    Innovation and creative thinking
+                    Cross-functional collaboration
                   </li>
                 </ul>
               </CardContent>
@@ -83,7 +86,7 @@ const AboutSection = () => {
           <div className="space-y-6">
             <Card className="border-0 bg-gradient-to-br from-green-50 to-blue-50 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-800">Skills & Expertise</CardTitle>
+                <CardTitle className="text-xl text-gray-800">Product Management Skills</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">

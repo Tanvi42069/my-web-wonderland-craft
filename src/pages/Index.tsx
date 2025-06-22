@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -52,24 +51,25 @@ const Index = () => {
           </div>
           
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Welcome to my digital portfolio. I'm passionate about creating meaningful solutions 
-            and bringing ideas to life through innovative approaches and creative thinking.
+            Aspiring Product Manager passionate about building user-centric products that solve real problems. 
+            I transform ideas into successful products through strategic thinking, data-driven decisions, and collaborative leadership.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Badge variant="secondary" className="px-4 py-2 text-sm">Creative Professional</Badge>
-            <Badge variant="secondary" className="px-4 py-2 text-sm">Problem Solver</Badge>
-            <Badge variant="secondary" className="px-4 py-2 text-sm">Innovation Driven</Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">Product Strategy</Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">User Research</Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">Data-Driven</Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">Agile Leadership</Badge>
           </div>
           
           <div className="flex justify-center gap-4">
             <Button onClick={() => scrollToSection('portfolio')} size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3">
               <Folder className="mr-2" size={20} />
-              View My Work
+              View My Product Work
             </Button>
             <Button onClick={() => scrollToSection('about')} variant="outline" size="lg" className="px-8 py-3 border-2 hover:bg-gray-50">
               <User className="mr-2" size={20} />
-              Learn More About Me
+              Learn About My Approach
             </Button>
           </div>
         </div>
@@ -84,14 +84,14 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-2xl font-semibold mb-4">Let's Connect</h3>
+          <h3 className="text-2xl font-semibold mb-4">Let's Build Something Amazing</h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations. 
-            Feel free to reach out if you'd like to work together.
+            I'm excited about Product Manager opportunities where I can drive product strategy, 
+            lead cross-functional teams, and create products that make a meaningful impact.
           </p>
           <div className="flex justify-center gap-4">
             <a href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" target="_blank" rel="noopener noreferrer" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors">
-              Connect on LinkedIn
+              Explore Product Opportunities
             </a>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 text-gray-400 text-sm">
