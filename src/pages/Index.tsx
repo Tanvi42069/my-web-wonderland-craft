@@ -59,7 +59,7 @@ const Index = () => {
             </h1>
             <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full opacity-20 animate-pulse overflow-hidden">
               <img 
-                src="/lovable-uploads/4dd48587-f504-4c20-9c1a-92c32f9eb1d0.png" 
+                src="/lovable-uploads/2125cfe2-857a-4e54-9dd9-5a40ae401762.png" 
                 alt="Tanvi Bokade"
                 className="w-full h-full object-cover rounded-full"
               />
