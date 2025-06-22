@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -82,15 +81,6 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/4dd48587-f504-4c20-9c1a-92c32f9eb1d0.png" 
-                alt="Tanvi Bokade - Professional Portrait" 
-                className="w-full h-80 object-cover rounded-2xl shadow-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-            </div>
-
             <Card className="border-0 bg-gradient-to-br from-green-50 to-blue-50 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-xl text-gray-800">Skills & Expertise</CardTitle>
