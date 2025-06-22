@@ -1,19 +1,17 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { User, Briefcase, FileText, Folder } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import PortfolioSection from "@/components/PortfolioSection";
-
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -22,26 +20,15 @@ const Index = () => {
               Tanvi Bokade
             </div>
             <div className="flex gap-6">
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
-              >
+              <button onClick={() => scrollToSection('about')} className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
                 <User size={18} />
                 About
               </button>
-              <button 
-                onClick={() => scrollToSection('portfolio')}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
-              >
+              <button onClick={() => scrollToSection('portfolio')} className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
                 <Briefcase size={18} />
                 Portfolio
               </button>
-              <a 
-                href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+              <a href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 <FileText size={18} />
                 LinkedIn
               </a>
@@ -58,11 +45,7 @@ const Index = () => {
               Tanvi Bokade
             </h1>
             <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full opacity-20 animate-pulse overflow-hidden">
-              <img 
-                src="/lovable-uploads/2125cfe2-857a-4e54-9dd9-5a40ae401762.png" 
-                alt="Tanvi Bokade"
-                className="w-full h-full object-cover rounded-full"
-              />
+              <img alt="Tanvi Bokade" className="w-full h-full object-cover rounded-full" src="/lovable-uploads/134eef95-0cef-4ed8-baa7-709a1058beec.jpg" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
           </div>
@@ -79,20 +62,11 @@ const Index = () => {
           </div>
           
           <div className="flex justify-center gap-4">
-            <Button 
-              onClick={() => scrollToSection('portfolio')}
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
-            >
+            <Button onClick={() => scrollToSection('portfolio')} size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3">
               <Folder className="mr-2" size={20} />
               View My Work
             </Button>
-            <Button 
-              onClick={() => scrollToSection('about')}
-              variant="outline" 
-              size="lg"
-              className="px-8 py-3 border-2 hover:bg-gray-50"
-            >
+            <Button onClick={() => scrollToSection('about')} variant="outline" size="lg" className="px-8 py-3 border-2 hover:bg-gray-50">
               <User className="mr-2" size={20} />
               Learn More About Me
             </Button>
@@ -115,12 +89,7 @@ const Index = () => {
             Feel free to reach out if you'd like to work together.
           </p>
           <div className="flex justify-center gap-4">
-            <a 
-              href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors"
-            >
+            <a href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" target="_blank" rel="noopener noreferrer" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors">
               Connect on LinkedIn
             </a>
           </div>
@@ -129,8 +98,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
