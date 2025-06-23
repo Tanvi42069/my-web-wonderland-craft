@@ -7,43 +7,43 @@ import { Briefcase, FileText } from "lucide-react";
 const PortfolioSection = () => {
   const projects = [
     {
-      title: "Strategic Planning & Research",
-      description: "Led comprehensive research initiatives and strategic planning processes. Developed innovative approaches to complex challenges and delivered actionable insights that drove significant organizational improvements.",
+      title: "Public Speaking",
+      description: "Led engaging presentations and delivered compelling speeches to diverse audiences. Developed strong communication skills through participation in conferences, workshops, and public forums, effectively conveying complex ideas with clarity and confidence.",
       image: "/lovable-uploads/fd5de28a-cc60-490c-9d30-577af53d49cd.png",
-      tags: ["Research", "Strategy", "Analysis", "Planning"],
-      category: "Strategy"
+      tags: ["Communication", "Presentation", "Leadership", "Confidence"],
+      category: "Speaking"
     },
     {
-      title: "Team Leadership & Collaboration",
-      description: "Successfully managed diverse teams and facilitated cross-functional collaboration. Implemented effective communication strategies and mentorship programs that enhanced team performance and project outcomes.",
+      title: "Networking",
+      description: "Built and maintained professional relationships across various industries and sectors. Successfully established meaningful connections that fostered collaboration, knowledge sharing, and mutual growth opportunities within professional communities.",
       image: "/lovable-uploads/a0c1cc61-6250-4a1e-8560-a5b826d7928c.png",
-      tags: ["Leadership", "Teamwork", "Communication", "Mentorship"],
-      category: "Leadership"
+      tags: ["Professional Relations", "Community Building", "Collaboration", "Growth"],
+      category: "Professional"
     },
     {
-      title: "Innovation & Creative Solutions",
-      description: "Developed innovative solutions to complex problems through creative thinking and systematic approach. Implemented new processes and methodologies that improved efficiency and effectiveness across multiple projects.",
+      title: "Academic Acclamation",
+      description: "Achieved recognition for academic excellence and scholarly contributions. Demonstrated consistent high performance in educational pursuits while contributing to research initiatives and maintaining exceptional academic standards throughout academic career.",
       image: "/lovable-uploads/83597ca6-981d-49db-86d6-6d106e5c2e43.png",
-      tags: ["Innovation", "Problem Solving", "Creativity", "Process Improvement"],
-      category: "Innovation"
+      tags: ["Academic Excellence", "Research", "Scholarship", "Achievement"],
+      category: "Academic"
     },
     {
-      title: "Data Analysis & Insights",
-      description: "Conducted in-depth data analysis and generated meaningful insights to support decision-making processes. Created comprehensive reports and presentations that influenced strategic directions and operational improvements.",
+      title: "Social Service",
+      description: "Actively participated in community service initiatives and social impact projects. Contributed time and skills to various causes, demonstrating commitment to social responsibility and making positive contributions to community welfare and development.",
       image: "/lovable-uploads/20b443da-f1f3-430c-b003-437ed3ea8013.png",
-      tags: ["Data Analysis", "Insights", "Reporting", "Decision Support"],
-      category: "Analytics"
+      tags: ["Community Service", "Social Impact", "Volunteering", "Social Responsibility"],
+      category: "Service"
     },
     {
-      title: "Project Management & Execution",
-      description: "Successfully managed multiple complex projects from conception to completion. Coordinated resources, timelines, and stakeholders to deliver high-quality results within scope and budget constraints.",
+      title: "Team Work and Collaboration",
+      description: "Successfully collaborated with diverse teams to achieve common goals and deliver exceptional results. Demonstrated strong interpersonal skills, adaptability, and the ability to work effectively in both leadership and supportive roles within team environments.",
       image: "/lovable-uploads/ca9525cf-8121-4d92-9ce2-eacc0d28b894.png",
-      tags: ["Project Management", "Execution", "Coordination", "Quality Assurance"],
-      category: "Management"
+      tags: ["Teamwork", "Collaboration", "Leadership", "Interpersonal Skills"],
+      category: "Collaboration"
     },
     {
       title: "Communication & Presentation",
-      description: "Developed and delivered compelling presentations and communications to diverse audiences. Created engaging content and facilitated workshops that effectively conveyed complex information and drove engagement.",
+      description: "Developed and delivered compelling presentations and communications to diverse audiences. Created engaging content and facilitated workshops that effectively conveyed complex information and drove engagement across various professional settings.",
       image: "/lovable-uploads/13eceb2a-818b-4a30-ad29-1c13191fd1a4.png",
       tags: ["Communication", "Presentation", "Content Creation", "Facilitation"],
       category: "Communication"
@@ -61,8 +61,8 @@ const PortfolioSection = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-orange-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Showcasing a diverse range of projects and achievements that demonstrate my ability to deliver 
-            innovative solutions, lead effective teams, and drive meaningful results across various domains.
+            Showcasing a diverse range of experiences and achievements that demonstrate my commitment to 
+            professional growth, community engagement, and collaborative excellence across various domains.
           </p>
         </div>
 
@@ -154,4 +154,3 @@ const PortfolioSection = () => {
 };
 
 export default PortfolioSection;
-
