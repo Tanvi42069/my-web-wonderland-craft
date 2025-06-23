@@ -44,9 +44,6 @@ const Index = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
               Tanvi Bokade
             </h1>
-            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full opacity-20 animate-pulse overflow-hidden">
-              <img alt="Tanvi Bokade" className="w-full h-full object-cover rounded-full" src="/lovable-uploads/36a01f04-22cf-4253-a498-df6bf818ad95.png" />
-            </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
           </div>
           
