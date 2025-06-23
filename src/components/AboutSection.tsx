@@ -6,49 +6,49 @@ import { Linkedin } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
-    "Product Strategy", "User Research", "Data Analysis", "Agile/Scrum",
-    "Stakeholder Management", "Product Roadmapping", "A/B Testing", "Market Research",
-    "Cross-functional Leadership", "Product Analytics", "User Experience Design", "Go-to-Market Strategy"
+    "Creative Problem Solving", "Leadership", "Strategic Planning", "Team Collaboration",
+    "Project Management", "Communication", "Innovation", "Research & Analysis",
+    "Adaptability", "Critical Thinking", "Time Management", "Cross-functional Coordination"
   ];
 
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="about" className="py-20 px-6 bg-white">
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-900 to-red-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-red-400 bg-clip-text text-transparent">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-orange-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Card className="border-0 bg-gradient-to-br from-blue-50 to-purple-50 shadow-lg">
+            <Card className="border-0 bg-gradient-to-br from-red-950/50 to-orange-950/50 shadow-2xl border border-red-500/30">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800">Product Management Journey</CardTitle>
-                <CardDescription className="text-gray-600">
-                  Building products that matter
+                <CardTitle className="text-2xl text-white">My Journey</CardTitle>
+                <CardDescription className="text-gray-300">
+                  Building solutions that matter
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  As an aspiring Product Manager, I bring a unique blend of strategic thinking, 
-                  user-centric design, and data-driven decision making. My experience spans 
-                  product strategy, user research, and cross-functional team leadership.
+                <p className="text-gray-200 leading-relaxed mb-4">
+                  I'm a passionate professional who believes in the power of innovation and collaboration. 
+                  My experience spans across various domains where I've developed a strong foundation 
+                  in strategic thinking, creative problem-solving, and team leadership.
                 </p>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  I excel at translating customer needs into actionable product requirements, 
-                  managing product roadmaps, and driving successful product launches through 
-                  collaborative stakeholder management and agile methodologies.
+                <p className="text-gray-200 leading-relaxed mb-6">
+                  I excel at translating complex challenges into actionable solutions, 
+                  managing diverse projects, and driving successful outcomes through 
+                  effective communication and collaborative approaches.
                 </p>
                 <a 
                   href={linkedInUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                  <Button className="bg-red-600 hover:bg-red-700 text-white font-bold">
                     <Linkedin className="mr-2" size={16} />
                     Connect with me
                   </Button>
@@ -56,27 +56,27 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg">
+            <Card className="border-0 bg-gradient-to-br from-orange-950/50 to-red-950/50 shadow-2xl border border-orange-500/30">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-800">Product Management Principles</CardTitle>
+                <CardTitle className="text-xl text-white">Core Values</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-200">
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    Customer-first product development
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    Innovation-driven approach
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                    Data-driven decision making
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    Collaborative teamwork
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-pink-600 rounded-full"></div>
-                    Agile and iterative approach
+                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                    Continuous learning mindset
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-indigo-600 rounded-full"></div>
-                    Cross-functional collaboration
+                    <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
+                    Results-focused execution
                   </li>
                 </ul>
               </CardContent>
@@ -84,9 +84,9 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-6">
-            <Card className="border-0 bg-gradient-to-br from-green-50 to-blue-50 shadow-lg">
+            <Card className="border-0 bg-gradient-to-br from-red-950/50 to-gray-900/50 shadow-2xl border border-red-400/30">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-800">Product Management Skills</CardTitle>
+                <CardTitle className="text-xl text-white">Skills & Expertise</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -94,7 +94,7 @@ const AboutSection = () => {
                     <Badge 
                       key={index} 
                       variant="secondary" 
-                      className="bg-white/80 text-gray-700 hover:bg-white transition-colors"
+                      className="bg-red-600/80 text-white hover:bg-red-500 transition-colors font-semibold"
                     >
                       {skill}
                     </Badge>
@@ -105,7 +105,7 @@ const AboutSection = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+                  <Button variant="outline" className="w-full border-red-500 text-red-400 hover:bg-red-600 hover:text-white font-bold">
                     <Linkedin className="mr-2" size={16} />
                     View Full Profile
                   </Button>
@@ -120,3 +120,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
