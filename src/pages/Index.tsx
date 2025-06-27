@@ -99,7 +99,7 @@ const Index = () => {
             and individuals who want to create meaningful impact through innovative solutions.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="https://www.linkedin.com/in/tanvi-bokade-3817681b0" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 px-6 py-3 rounded-lg transition-colors font-bold">
+            <a href="mailto:your.email@example.com" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 px-6 py-3 rounded-lg transition-colors font-bold">
               Start a Conversation
             </a>
           </div>
