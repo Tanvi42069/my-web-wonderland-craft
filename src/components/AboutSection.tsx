@@ -27,10 +27,10 @@ const AboutSection = () => {
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-700 via-purple-700 to-pink-700">
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-cream-50 via-orange-25 to-pink-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-pink-700 bg-clip-text text-transparent">
             About Tanvi
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>
@@ -38,20 +38,20 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <Card className="border-0 bg-gradient-to-br from-pink-950/50 to-purple-950/50 shadow-2xl border border-pink-500/30">
+            <Card className="border-0 bg-white/80 shadow-xl border border-pink-200/50">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Her Journey</CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardTitle className="text-2xl text-gray-800">Her Journey</CardTitle>
+                <CardDescription className="text-gray-600">
                   Building solutions that matter
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-200 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   Tanvi is a passionate professional who believes in the power of innovation and collaboration. 
                   Her experience spans across various domains where she has developed a strong foundation 
                   in strategic thinking, creative problem-solving, and team leadership.
                 </p>
-                <p className="text-gray-200 leading-relaxed mb-6">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   She excels at translating complex challenges into actionable solutions, 
                   managing diverse projects, and driving successful outcomes through 
                   effective communication and collaborative approaches.
@@ -69,12 +69,12 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 bg-gradient-to-br from-purple-950/50 to-blue-950/50 shadow-2xl border border-purple-500/30">
+            <Card className="border-0 bg-white/80 shadow-xl border border-purple-200/50">
               <CardHeader>
-                <CardTitle className="text-xl text-white">Core Values</CardTitle>
+                <CardTitle className="text-xl text-gray-800">Core Values</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-gray-200">
+                <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
                     Innovation-driven approach
@@ -98,10 +98,10 @@ const AboutSection = () => {
 
           <div className="space-y-6">
             {/* Interactive Skills Constellation */}
-            <Card className="border-0 bg-gradient-to-br from-gray-900/80 to-purple-900/50 shadow-2xl border border-gray-400/30">
+            <Card className="border-0 bg-white/90 shadow-xl border border-gray-200/50">
               <CardHeader>
-                <CardTitle className="text-xl text-white">Skills Constellation</CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardTitle className="text-xl text-gray-800">Skills Constellation</CardTitle>
+                <CardDescription className="text-gray-600">
                   Interactive network showing how expertise connects and flows
                 </CardDescription>
               </CardHeader>
@@ -112,17 +112,17 @@ const AboutSection = () => {
 
             {/* Tools as Superpowers */}
             <div className="grid grid-cols-1 gap-4">
-              <Card className="border-0 bg-gradient-to-br from-green-950/50 to-emerald-900/50 shadow-xl border border-green-500/30">
+              <Card className="border-0 bg-white/80 shadow-xl border border-green-200/50">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg text-white flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-green-400" />
+                  <CardTitle className="text-lg text-gray-800 flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-green-600" />
                     Superpowers
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {superpowers.map((skill, index) => (
-                      <Badge key={index} className="bg-green-600/80 text-white hover:bg-green-500 transition-colors font-semibold flex items-center gap-1">
+                      <Badge key={index} className="bg-green-100 text-green-700 hover:bg-green-200 transition-colors font-semibold flex items-center gap-1">
                         {skill.icon}
                         {skill.name}
                       </Badge>
@@ -131,17 +131,17 @@ const AboutSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-gradient-to-br from-yellow-950/50 to-orange-900/50 shadow-xl border border-yellow-500/30">
+              <Card className="border-0 bg-white/80 shadow-xl border border-yellow-200/50">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg text-white flex items-center gap-2">
-                    <Cog className="w-5 h-5 text-yellow-400" />
+                  <CardTitle className="text-lg text-gray-800 flex items-center gap-2">
+                    <Cog className="w-5 h-5 text-yellow-600" />
                     Work-in-Progress
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {workInProgress.map((skill, index) => (
-                      <Badge key={index} className="bg-yellow-600/80 text-white hover:bg-yellow-500 transition-colors font-semibold flex items-center gap-1">
+                      <Badge key={index} className="bg-yellow-100 text-yellow-700 hover:bg-yellow-200 transition-colors font-semibold flex items-center gap-1">
                         {skill.icon}
                         {skill.name}
                       </Badge>
@@ -150,17 +150,17 @@ const AboutSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-gradient-to-br from-blue-950/50 to-cyan-900/50 shadow-xl border border-blue-500/30">
+              <Card className="border-0 bg-white/80 shadow-xl border border-blue-200/50">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg text-white flex items-center gap-2">
-                    <Telescope className="w-5 h-5 text-blue-400" />
+                  <CardTitle className="text-lg text-gray-800 flex items-center gap-2">
+                    <Telescope className="w-5 h-5 text-blue-600" />
                     Exploring
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {exploring.map((skill, index) => (
-                      <Badge key={index} className="bg-blue-600/80 text-white hover:bg-blue-500 transition-colors font-semibold flex items-center gap-1">
+                      <Badge key={index} className="bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors font-semibold flex items-center gap-1">
                         {skill.icon}
                         {skill.name}
                       </Badge>

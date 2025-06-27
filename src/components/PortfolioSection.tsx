@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -22,7 +23,7 @@ const PortfolioSection = () => {
       icon: <Users className="w-6 h-6" />
     },
     {
-      title: "Social Service",
+      title: "Academic Acclamation",
       description: "Achieved recognition for academic excellence and scholarly contributions. Demonstrated consistent high performance while contributing to research initiatives.",
       image: "/lovable-uploads/83597ca6-981d-49db-86d6-6d106e5c2e43.png",
       tags: ["Academic Excellence", "Research", "Achievement"],
@@ -30,7 +31,7 @@ const PortfolioSection = () => {
       icon: <BookOpen className="w-6 h-6" />
     },
     {
-      title: "Academic Acclamation",
+      title: "Social Service",
       description: "Actively participated in community service initiatives and social impact projects. Contributed time and skills to various causes for community welfare.",
       image: "/lovable-uploads/20b443da-f1f3-430c-b003-437ed3ea8013.png",
       tags: ["Community Service", "Social Impact", "Volunteering"],
@@ -72,14 +73,14 @@ const PortfolioSection = () => {
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-slate-700 via-gray-600 to-zinc-700">
+    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-white via-orange-50 to-red-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-orange-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-orange-700 bg-clip-text text-transparent">
             Portfolio & Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             A showcase of experiences, achievements, and innovative projects that demonstrate 
             commitment to excellence and collaborative impact.
           </p>
@@ -87,13 +88,13 @@ const PortfolioSection = () => {
 
         {/* Featured Projects Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-            <Code className="w-6 h-6 text-orange-400" />
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+            <Code className="w-6 h-6 text-orange-600" />
             Featured Projects
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-gray-800/40 to-zinc-800/40 backdrop-blur-sm border border-orange-500/30">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white backdrop-blur-sm border border-orange-200/50 shadow-lg">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img 
                     src={project.image} 
@@ -111,10 +112,10 @@ const PortfolioSection = () => {
                 </div>
                 
                 <CardHeader>
-                  <CardTitle className="text-lg text-white group-hover:text-orange-400 transition-colors">
+                  <CardTitle className="text-lg text-gray-800 group-hover:text-orange-600 transition-colors">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-300 leading-relaxed text-sm">
+                  <CardDescription className="text-gray-600 leading-relaxed text-sm">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
@@ -125,7 +126,7 @@ const PortfolioSection = () => {
                       <Badge 
                         key={tagIndex} 
                         variant="secondary" 
-                        className="text-xs bg-orange-600/70 text-white hover:bg-orange-500 transition-colors font-semibold"
+                        className="text-xs bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors font-semibold"
                       >
                         {tag}
                       </Badge>
@@ -139,13 +140,13 @@ const PortfolioSection = () => {
 
         {/* Experience Section */}
         <div>
-          <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-            <Briefcase className="w-6 h-6 text-red-400" />
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+            <Briefcase className="w-6 h-6 text-red-600" />
             Professional Experience
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {experiences.map((experience, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-gray-800/30 to-red-800/30 backdrop-blur-sm border border-red-500/30">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white backdrop-blur-sm border border-red-200/50 shadow-lg">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img 
                     src={experience.image} 
@@ -163,10 +164,10 @@ const PortfolioSection = () => {
                 </div>
                 
                 <CardHeader>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors">
+                  <CardTitle className="text-lg text-gray-800 group-hover:text-red-600 transition-colors">
                     {experience.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-300 leading-relaxed text-sm">
+                  <CardDescription className="text-gray-600 leading-relaxed text-sm">
                     {experience.description}
                   </CardDescription>
                 </CardHeader>
@@ -177,7 +178,7 @@ const PortfolioSection = () => {
                       <Badge 
                         key={tagIndex} 
                         variant="secondary" 
-                        className="text-xs bg-red-600/70 text-white hover:bg-red-500 transition-colors font-semibold"
+                        className="text-xs bg-red-100 text-red-700 hover:bg-red-200 transition-colors font-semibold"
                       >
                         {tag}
                       </Badge>
@@ -192,7 +193,7 @@ const PortfolioSection = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300 border-red-500 text-red-400 font-bold text-sm"
+                      className="w-full group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300 border-red-400 text-red-600 font-bold text-sm"
                     >
                       <FileText className="mr-2" size={14} />
                       Learn More
@@ -202,50 +203,6 @@ const PortfolioSection = () => {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-20">
-          <Card className="bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 text-white border-0 max-w-3xl mx-auto shadow-2xl">
-            <CardHeader>
-              <CardTitle className="text-3xl font-bold">Let's Create Something Extraordinary</CardTitle>
-              <CardDescription className="text-orange-100 text-lg">
-                Ready to turn bold ideas into reality? Join me in building innovative solutions 
-                that make a meaningful impact. Together, we can craft something truly remarkable.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href={linkedInUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="lg" 
-                    className="bg-white text-orange-600 hover:bg-gray-100 font-bold text-lg px-8"
-                  >
-                    <Briefcase className="mr-2" size={20} />
-                    Let's Collaborate
-                  </Button>
-                </a>
-                <a 
-                  href="https://github.com/tanvibokade" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="lg" 
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold text-lg px-8"
-                  >
-                    <Code className="mr-2" size={20} />
-                    View Code
-                  </Button>
-                </a>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
