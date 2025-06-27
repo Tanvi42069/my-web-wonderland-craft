@@ -14,7 +14,7 @@ const PortfolioSection = () => {
       icon: <MessageSquare className="w-6 h-6" />
     },
     {
-      title: "Networking",
+      title: "Teamwork and Collaboration",
       description: "Built and maintained professional relationships across various industries and sectors. Successfully established meaningful connections that fostered collaboration and growth.",
       image: "/lovable-uploads/a0c1cc61-6250-4a1e-8560-a5b826d7928c.png",
       tags: ["Professional Relations", "Community Building", "Growth"],
@@ -22,7 +22,7 @@ const PortfolioSection = () => {
       icon: <Users className="w-6 h-6" />
     },
     {
-      title: "Academic Acclamation",
+      title: "Social Service",
       description: "Achieved recognition for academic excellence and scholarly contributions. Demonstrated consistent high performance while contributing to research initiatives.",
       image: "/lovable-uploads/83597ca6-981d-49db-86d6-6d106e5c2e43.png",
       tags: ["Academic Excellence", "Research", "Achievement"],
@@ -30,20 +30,12 @@ const PortfolioSection = () => {
       icon: <BookOpen className="w-6 h-6" />
     },
     {
-      title: "Social Service",
+      title: "Academic Acclamation",
       description: "Actively participated in community service initiatives and social impact projects. Contributed time and skills to various causes for community welfare.",
       image: "/lovable-uploads/20b443da-f1f3-430c-b003-437ed3ea8013.png",
       tags: ["Community Service", "Social Impact", "Volunteering"],
       category: "Service",
       icon: <Heart className="w-6 h-6" />
-    },
-    {
-      title: "Team Work and Collaboration",
-      description: "Successfully collaborated with diverse teams to achieve common goals. Demonstrated strong interpersonal skills and adaptability in team environments.",
-      image: "/lovable-uploads/ca9525cf-8121-4d92-9ce2-eacc0d28b894.png",
-      tags: ["Teamwork", "Collaboration", "Leadership"],
-      category: "Collaboration",
-      icon: <Handshake className="w-6 h-6" />
     }
   ];
 
@@ -80,7 +72,7 @@ const PortfolioSection = () => {
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-slate-900 via-gray-800 to-zinc-900">
+    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-slate-700 via-gray-600 to-zinc-700">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-orange-400 bg-clip-text text-transparent">
@@ -151,7 +143,7 @@ const PortfolioSection = () => {
             <Briefcase className="w-6 h-6 text-red-400" />
             Professional Experience
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {experiences.map((experience, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-gray-800/30 to-red-800/30 backdrop-blur-sm border border-red-500/30">
                 <div className="relative overflow-hidden rounded-t-lg">

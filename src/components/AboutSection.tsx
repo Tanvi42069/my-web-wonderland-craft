@@ -3,17 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Zap, Brain, Telescope, Rocket, Users, Target, Lightbulb, Cog, Clock } from "lucide-react";
+import SkillsConstellation from "./SkillsConstellation";
 
 const AboutSection = () => {
-  const skillsMap = [
-    { name: "Creative Problem Solving", color: "bg-pink-500", position: "top-0 left-1/4" },
-    { name: "Leadership", color: "bg-purple-500", position: "top-16 left-1/2" },
-    { name: "Strategic Planning", color: "bg-blue-500", position: "top-32 left-1/4" },
-    { name: "Team Collaboration", color: "bg-green-500", position: "top-48 left-1/2" },
-    { name: "Communication", color: "bg-yellow-500", position: "top-64 left-1/4" },
-    { name: "Innovation", color: "bg-orange-500", position: "top-80 left-1/2" }
-  ];
-
   const superpowers = [
     { name: "Strategic Thinking", icon: <Target className="w-5 h-5" /> },
     { name: "Leadership", icon: <Users className="w-5 h-5" /> },
@@ -35,7 +27,7 @@ const AboutSection = () => {
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900">
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-700 via-purple-700 to-pink-700">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-pink-400 bg-clip-text text-transparent">
@@ -105,28 +97,16 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-6">
-            {/* Skills Subway Map */}
+            {/* Interactive Skills Constellation */}
             <Card className="border-0 bg-gradient-to-br from-gray-900/80 to-purple-900/50 shadow-2xl border border-gray-400/30">
               <CardHeader>
-                <CardTitle className="text-xl text-white">Skills Network</CardTitle>
+                <CardTitle className="text-xl text-white">Skills Constellation</CardTitle>
                 <CardDescription className="text-gray-300">
-                  How expertise connects and flows
+                  Interactive network showing how expertise connects and flows
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="relative h-96 bg-gray-800/50 rounded-lg p-4 overflow-hidden">
-                  {skillsMap.map((skill, index) => (
-                    <div key={index} className={`absolute ${skill.position} transform -translate-x-1/2`}>
-                      <div className={`${skill.color} rounded-full w-4 h-4 relative z-10`}></div>
-                      <div className="mt-2 text-xs text-white text-center whitespace-nowrap bg-black/70 px-2 py-1 rounded">
-                        {skill.name}
-                      </div>
-                      {index < skillsMap.length - 1 && (
-                        <div className="absolute top-2 left-2 w-20 h-0.5 bg-gray-400 transform rotate-45"></div>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                <SkillsConstellation />
               </CardContent>
             </Card>
 
