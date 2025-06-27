@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -81,13 +80,13 @@ const PortfolioSection = () => {
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-black via-purple-950 to-blue-900">
+    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-slate-900 via-gray-800 to-zinc-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-orange-400 bg-clip-text text-transparent">
             Portfolio & Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A showcase of experiences, achievements, and innovative projects that demonstrate 
             commitment to excellence and collaborative impact.
@@ -97,12 +96,12 @@ const PortfolioSection = () => {
         {/* Featured Projects Section */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-            <Code className="w-6 h-6 text-pink-400" />
+            <Code className="w-6 h-6 text-orange-400" />
             Featured Projects
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-purple-950/40 to-blue-950/40 backdrop-blur-sm border border-purple-500/30">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-gray-800/40 to-zinc-800/40 backdrop-blur-sm border border-orange-500/30">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img 
                     src={project.image} 
@@ -110,7 +109,7 @@ const PortfolioSection = () => {
                     className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-pink-600 text-white font-bold">
+                    <Badge className="bg-orange-600 text-white font-bold">
                       {project.status}
                     </Badge>
                   </div>
@@ -120,7 +119,7 @@ const PortfolioSection = () => {
                 </div>
                 
                 <CardHeader>
-                  <CardTitle className="text-lg text-white group-hover:text-pink-400 transition-colors">
+                  <CardTitle className="text-lg text-white group-hover:text-orange-400 transition-colors">
                     {project.title}
                   </CardTitle>
                   <CardDescription className="text-gray-300 leading-relaxed text-sm">
@@ -134,7 +133,7 @@ const PortfolioSection = () => {
                       <Badge 
                         key={tagIndex} 
                         variant="secondary" 
-                        className="text-xs bg-purple-600/70 text-white hover:bg-purple-500 transition-colors font-semibold"
+                        className="text-xs bg-orange-600/70 text-white hover:bg-orange-500 transition-colors font-semibold"
                       >
                         {tag}
                       </Badge>
@@ -149,12 +148,12 @@ const PortfolioSection = () => {
         {/* Experience Section */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-            <Briefcase className="w-6 h-6 text-purple-400" />
+            <Briefcase className="w-6 h-6 text-red-400" />
             Professional Experience
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {experiences.map((experience, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-purple-950/30 to-pink-950/30 backdrop-blur-sm border border-purple-500/30">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-gray-800/30 to-red-800/30 backdrop-blur-sm border border-red-500/30">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img 
                     src={experience.image} 
@@ -162,7 +161,7 @@ const PortfolioSection = () => {
                     className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-purple-600 text-white font-bold">
+                    <Badge className="bg-red-600 text-white font-bold">
                       {experience.category}
                     </Badge>
                   </div>
@@ -172,7 +171,7 @@ const PortfolioSection = () => {
                 </div>
                 
                 <CardHeader>
-                  <CardTitle className="text-lg text-white group-hover:text-purple-400 transition-colors">
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors">
                     {experience.title}
                   </CardTitle>
                   <CardDescription className="text-gray-300 leading-relaxed text-sm">
@@ -186,7 +185,7 @@ const PortfolioSection = () => {
                       <Badge 
                         key={tagIndex} 
                         variant="secondary" 
-                        className="text-xs bg-pink-600/70 text-white hover:bg-pink-500 transition-colors font-semibold"
+                        className="text-xs bg-red-600/70 text-white hover:bg-red-500 transition-colors font-semibold"
                       >
                         {tag}
                       </Badge>
@@ -201,7 +200,7 @@ const PortfolioSection = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-600 transition-all duration-300 border-purple-500 text-purple-400 font-bold text-sm"
+                      className="w-full group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300 border-red-500 text-red-400 font-bold text-sm"
                     >
                       <FileText className="mr-2" size={14} />
                       Learn More
@@ -215,12 +214,12 @@ const PortfolioSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <Card className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 text-white border-0 max-w-3xl mx-auto shadow-2xl">
+          <Card className="bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 text-white border-0 max-w-3xl mx-auto shadow-2xl">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold">Ready to Create Something Amazing?</CardTitle>
-              <CardDescription className="text-pink-100 text-lg">
-                Let's turn your vision into reality. Whether it's a groundbreaking project or an innovative solution, 
-                I'm excited to collaborate and make it happen together.
+              <CardTitle className="text-3xl font-bold">Let's Create Something Extraordinary</CardTitle>
+              <CardDescription className="text-orange-100 text-lg">
+                Ready to turn bold ideas into reality? Join me in building innovative solutions 
+                that make a meaningful impact. Together, we can craft something truly remarkable.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -232,21 +231,21 @@ const PortfolioSection = () => {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-white text-purple-600 hover:bg-gray-100 font-bold text-lg px-8"
+                    className="bg-white text-orange-600 hover:bg-gray-100 font-bold text-lg px-8"
                   >
                     <Briefcase className="mr-2" size={20} />
                     Let's Collaborate
                   </Button>
                 </a>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/tanvibokade" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold text-lg px-8"
+                    className="border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold text-lg px-8"
                   >
                     <Code className="mr-2" size={20} />
                     View Code
