@@ -1,11 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { User, Briefcase, FileText, Folder, Github } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import PortfolioSection from "@/components/PortfolioSection";
-
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -13,26 +11,26 @@ const Index = () => {
       behavior: 'smooth'
     });
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" style={{backgroundColor: '#FDF6E3'}}>
+  return <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" style={{
+    backgroundColor: '#FDF6E3'
+  }}>
       {/* Decorative Doodles */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Custom doodles/scribbles */}
         <svg className="absolute top-20 left-10 w-16 h-16 text-orange-300" viewBox="0 0 64 64">
-          <path d="M10 30 Q20 10 30 30 Q40 50 50 30" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <circle cx="15" cy="25" r="2" fill="currentColor"/>
-          <circle cx="45" cy="35" r="1.5" fill="currentColor"/>
+          <path d="M10 30 Q20 10 30 30 Q40 50 50 30" stroke="currentColor" strokeWidth="2" fill="none" />
+          <circle cx="15" cy="25" r="2" fill="currentColor" />
+          <circle cx="45" cy="35" r="1.5" fill="currentColor" />
         </svg>
         
         <svg className="absolute top-40 right-20 w-20 h-20 text-pink-200" viewBox="0 0 80 80">
-          <path d="M20 40 Q40 20 60 40 Q40 60 20 40" stroke="currentColor" strokeWidth="3" fill="none"/>
-          <path d="M30 30 L50 50 M50 30 L30 50" stroke="currentColor" strokeWidth="2"/>
+          <path d="M20 40 Q40 20 60 40 Q40 60 20 40" stroke="currentColor" strokeWidth="3" fill="none" />
+          <path d="M30 30 L50 50 M50 30 L30 50" stroke="currentColor" strokeWidth="2" />
         </svg>
         
         <svg className="absolute bottom-40 left-20 w-24 h-24 text-purple-200" viewBox="0 0 96 96">
-          <circle cx="48" cy="48" r="20" stroke="currentColor" strokeWidth="3" fill="none"/>
-          <path d="M30 30 Q48 10 66 30 Q48 50 30 30" stroke="currentColor" strokeWidth="2" fill="none"/>
+          <circle cx="48" cy="48" r="20" stroke="currentColor" strokeWidth="3" fill="none" />
+          <path d="M30 30 Q48 10 66 30 Q48 50 30 30" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
         
         {/* More scattered doodles */}
@@ -42,10 +40,10 @@ const Index = () => {
         
         {/* Squiggly lines */}
         <svg className="absolute top-32 right-32 w-20 h-12 text-purple-200" viewBox="0 0 80 48">
-          <path d="M5 24 Q20 5 35 24 T65 24" stroke="currentColor" strokeWidth="3" fill="none"/>
+          <path d="M5 24 Q20 5 35 24 T65 24" stroke="currentColor" strokeWidth="3" fill="none" />
         </svg>
         <svg className="absolute bottom-32 left-32 w-24 h-16 text-pink-200" viewBox="0 0 96 64">
-          <path d="M5 32 Q25 10 45 32 T85 32" stroke="currentColor" strokeWidth="3" fill="none"/>
+          <path d="M5 32 Q25 10 45 32 T85 32" stroke="currentColor" strokeWidth="3" fill="none" />
         </svg>
         
         {/* Dots pattern */}
@@ -88,18 +86,14 @@ const Index = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="relative flex flex-col items-center mb-8">
             <div className="mb-8">
-              <img 
-                src="/lovable-uploads/9fd95d39-52bf-4a70-a19d-307ddf3034cb.png" 
-                alt="Tanvi Bokade" 
-                className="w-48 h-48 rounded-full object-cover border-4 border-pink-400 shadow-2xl"
-              />
+              <img src="/lovable-uploads/9fd95d39-52bf-4a70-a19d-307ddf3034cb.png" alt="Tanvi Bokade" className="w-48 h-48 rounded-full object-cover border-4 border-pink-400 shadow-2xl" />
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-700 via-pink-600 to-blue-700 bg-clip-text text-transparent leading-tight">
               Tanvi Bokade
             </h1>
           </div>
           
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-zinc-700">
             Creative professional passionate about building innovative solutions and bringing ideas to life. 
             I transform concepts into reality through strategic thinking, creative problem-solving, and collaborative teamwork.
           </p>
@@ -150,8 +144,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
