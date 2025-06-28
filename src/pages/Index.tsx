@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,30 +15,30 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" style={{backgroundColor: '#FDF6E3'}}>
       {/* Decorative Doodles */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Star doodles */}
-        <div className="absolute top-20 left-10 w-8 h-8 text-yellow-400">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <div className="absolute top-40 right-20 w-6 h-6 text-pink-300">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <div className="absolute bottom-40 left-20 w-10 h-10 text-orange-300">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
+        {/* Custom doodles/scribbles */}
+        <svg className="absolute top-20 left-10 w-16 h-16 text-orange-300" viewBox="0 0 64 64">
+          <path d="M10 30 Q20 10 30 30 Q40 50 50 30" stroke="currentColor" strokeWidth="2" fill="none"/>
+          <circle cx="15" cy="25" r="2" fill="currentColor"/>
+          <circle cx="45" cy="35" r="1.5" fill="currentColor"/>
+        </svg>
         
-        {/* Circle doodles */}
-        <div className="absolute top-60 left-5 w-12 h-12 border-4 border-purple-200 rounded-full"></div>
-        <div className="absolute top-80 right-10 w-8 h-8 border-3 border-pink-200 rounded-full"></div>
-        <div className="absolute bottom-60 right-5 w-16 h-16 border-4 border-yellow-200 rounded-full"></div>
+        <svg className="absolute top-40 right-20 w-20 h-20 text-pink-200" viewBox="0 0 80 80">
+          <path d="M20 40 Q40 20 60 40 Q40 60 20 40" stroke="currentColor" strokeWidth="3" fill="none"/>
+          <path d="M30 30 L50 50 M50 30 L30 50" stroke="currentColor" strokeWidth="2"/>
+        </svg>
+        
+        <svg className="absolute bottom-40 left-20 w-24 h-24 text-purple-200" viewBox="0 0 96 96">
+          <circle cx="48" cy="48" r="20" stroke="currentColor" strokeWidth="3" fill="none"/>
+          <path d="M30 30 Q48 10 66 30 Q48 50 30 30" stroke="currentColor" strokeWidth="2" fill="none"/>
+        </svg>
+        
+        {/* More scattered doodles */}
+        <div className="absolute top-60 right-40 w-8 h-8 border-4 border-yellow-200 rounded-full transform rotate-45"></div>
+        <div className="absolute bottom-60 right-20 w-6 h-6 bg-pink-200 transform rotate-45"></div>
+        <div className="absolute top-80 left-40 w-10 h-2 bg-orange-200 rounded-full"></div>
         
         {/* Squiggly lines */}
         <svg className="absolute top-32 right-32 w-20 h-12 text-purple-200" viewBox="0 0 80 48">
@@ -93,7 +94,7 @@ const Index = () => {
                 className="w-48 h-48 rounded-full object-cover border-4 border-pink-400 shadow-2xl"
               />
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-700 via-pink-600 to-blue-700 bg-clip-text text-transparent leading-tight">
               Tanvi Bokade
             </h1>
           </div>
