@@ -9,26 +9,27 @@ import {
   Star,
   Calendar,
   MapPin,
-  ExternalLink
+  ExternalLink,
+  FolderOpen
 } from "lucide-react";
 
 const PortfolioSection = () => {
   const experiences = [
     {
-      title: "Project Lead",
-      company: "Tech Innovation Hub",
+      title: "E-commerce Platform",
+      company: "Personal Project",
       period: "2023 - Present",
       location: "Remote",
-      description: "Leading cross-functional teams to deliver innovative solutions for complex technical challenges.",
-      skills: ["Leadership", "Project Management", "Strategic Planning"]
+      description: "Built a full-stack e-commerce platform with modern web technologies and payment integration.",
+      skills: ["React", "Node.js", "MongoDB"]
     },
     {
-      title: "Software Developer",
-      company: "Digital Solutions Inc.",
+      title: "Data Visualization Dashboard",
+      company: "Academic Project",
       period: "2022 - 2023",
-      location: "New York, NY",
-      description: "Developed scalable web applications using modern technologies and best practices.",
-      skills: ["JavaScript", "Python", "React"]
+      location: "University",
+      description: "Developed an interactive dashboard for analyzing and visualizing complex datasets.",
+      skills: ["Python", "D3.js", "PostgreSQL"]
     }
   ];
 
@@ -65,7 +66,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 relative">
+    <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent">
@@ -75,15 +76,15 @@ const PortfolioSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {/* Professional Experience */}
+          {/* Projects */}
           <Card className="border-0 bg-white/90 shadow-lg border border-purple-100/50 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-2xl text-gray-800 flex items-center gap-2">
-                <Users className="w-6 h-6 text-purple-600" />
-                Professional Experience
+                <FolderOpen className="w-6 h-6 text-purple-600" />
+                Projects
               </CardTitle>
               <CardDescription className="text-gray-600">
-                Building impactful solutions through collaboration
+                Building impactful solutions through innovation
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -118,12 +119,12 @@ const PortfolioSection = () => {
             </CardContent>
           </Card>
 
-          {/* Teamwork and Collaboration */}
+          {/* Team Leadership and Collaboration */}
           <Card className="border-0 bg-white/90 shadow-lg border border-pink-100/50 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-2xl text-gray-800 flex items-center gap-2">
                 <Users className="w-6 h-6 text-pink-600" />
-                Teamwork and Collaboration
+                Team Leadership and Collaboration
               </CardTitle>
               <CardDescription className="text-gray-600">
                 Building connections and fostering growth

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { User, Briefcase, FileText, Folder, Github } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import PortfolioSection from "@/components/PortfolioSection";
+
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,12 +12,13 @@ const Index = () => {
       behavior: 'smooth'
     });
   };
+
   return <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" style={{
     backgroundColor: '#FDF6E3'
   }}>
-      {/* Decorative Doodles */}
+      {/* Enhanced Decorative Doodles - Line-based */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Custom doodles/scribbles */}
+        {/* Original doodles */}
         <svg className="absolute top-20 left-10 w-16 h-16 text-orange-300" viewBox="0 0 64 64">
           <path d="M10 30 Q20 10 30 30 Q40 50 50 30" stroke="currentColor" strokeWidth="2" fill="none" />
           <circle cx="15" cy="25" r="2" fill="currentColor" />
@@ -32,13 +34,67 @@ const Index = () => {
           <circle cx="48" cy="48" r="20" stroke="currentColor" strokeWidth="3" fill="none" />
           <path d="M30 30 Q48 10 66 30 Q48 50 30 30" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
-        
-        {/* More scattered doodles */}
+
+        {/* New line-based doodles */}
+        {/* Flowing curves */}
+        <svg className="absolute top-16 right-60 w-32 h-24 text-orange-200" viewBox="0 0 128 96">
+          <path d="M10 48 Q32 20 54 48 T98 48" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M15 60 Q25 45 35 60 Q45 75 55 60" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        </svg>
+
+        {/* Abstract leaf shapes */}
+        <svg className="absolute top-60 left-60 w-20 h-28 text-pink-200" viewBox="0 0 80 112">
+          <path d="M40 10 Q60 30 50 60 Q40 90 30 60 Q20 30 40 10" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M40 10 L40 90" stroke="currentColor" strokeWidth="1" />
+        </svg>
+
+        {/* Geometric line patterns */}
+        <svg className="absolute bottom-20 right-40 w-28 h-28 text-purple-200" viewBox="0 0 112 112">
+          <path d="M20 20 L92 20 L92 92 L20 92 Z" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M20 20 L92 92 M92 20 L20 92" stroke="currentColor" strokeWidth="1" />
+          <circle cx="56" cy="56" r="15" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        </svg>
+
+        {/* Flowing ribbons */}
+        <svg className="absolute top-80 right-80 w-40 h-20 text-yellow-200" viewBox="0 0 160 80">
+          <path d="M10 40 Q40 10 70 40 Q100 70 130 40 Q150 20 160 40" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M5 50 Q30 25 55 50 Q80 75 105 50 Q130 25 155 50" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        </svg>
+
+        {/* Botanical line art */}
+        <svg className="absolute bottom-60 left-80 w-24 h-32 text-green-200" viewBox="0 0 96 128">
+          <path d="M48 20 Q30 40 48 60 Q66 40 48 20" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M48 60 Q35 75 48 90 Q61 75 48 60" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M48 90 Q40 100 48 110 Q56 100 48 90" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M48 20 L48 110" stroke="currentColor" strokeWidth="1" />
+        </svg>
+
+        {/* Spirals and swirls */}
+        <svg className="absolute top-96 left-20 w-20 h-20 text-pink-200" viewBox="0 0 80 80">
+          <path d="M40 40 Q50 30 50 40 Q50 50 40 50 Q30 50 30 40 Q30 30 40 30 Q60 30 60 40 Q60 60 40 60" stroke="currentColor" strokeWidth="2" fill="none" />
+        </svg>
+
+        {/* Network-like connections */}
+        <svg className="absolute bottom-80 right-20 w-32 h-24 text-purple-200" viewBox="0 0 128 96">
+          <circle cx="20" cy="20" r="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <circle cx="60" cy="30" r="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <circle cx="100" cy="25" r="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <circle cx="30" cy="60" r="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <circle cx="80" cy="70" r="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <path d="M20 20 L60 30 L100 25 M60 30 L80 70 M20 20 L30 60 L80 70" stroke="currentColor" strokeWidth="1" />
+        </svg>
+
+        {/* Abstract mountains */}
+        <svg className="absolute top-40 left-80 w-36 h-20 text-orange-200" viewBox="0 0 144 80">
+          <path d="M10 60 L30 20 L50 40 L70 15 L90 35 L110 10 L130 45 L144 60" stroke="currentColor" strokeWidth="2" fill="none" />
+        </svg>
+
+        {/* Keep existing simple shapes */}
         <div className="absolute top-60 right-40 w-8 h-8 border-4 border-yellow-200 rounded-full transform rotate-45"></div>
         <div className="absolute bottom-60 right-20 w-6 h-6 bg-pink-200 transform rotate-45"></div>
         <div className="absolute top-80 left-40 w-10 h-2 bg-orange-200 rounded-full"></div>
         
-        {/* Squiggly lines */}
+        {/* More squiggly lines */}
         <svg className="absolute top-32 right-32 w-20 h-12 text-purple-200" viewBox="0 0 80 48">
           <path d="M5 24 Q20 5 35 24 T65 24" stroke="currentColor" strokeWidth="3" fill="none" />
         </svg>
@@ -146,4 +202,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
