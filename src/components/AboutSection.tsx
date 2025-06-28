@@ -2,8 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Zap, Brain, Telescope, Rocket, Users, Target, Lightbulb, Cog, Clock } from "lucide-react";
-import SkillsConstellation from "./SkillsConstellation";
+import { Linkedin, Zap, Brain, Telescope, Rocket, Users, Target, Lightbulb, Cog, Clock, Code, Database, Globe, Palette } from "lucide-react";
 
 const AboutSection = () => {
   const superpowers = [
@@ -24,21 +23,44 @@ const AboutSection = () => {
     { name: "Digital Marketing", icon: <Telescope className="w-5 h-5" /> }
   ];
 
+  const technicalSkills = [
+    { name: "Python", icon: <Code className="w-4 h-4" />, color: "bg-blue-100 text-blue-700" },
+    { name: "JavaScript", icon: <Globe className="w-4 h-4" />, color: "bg-yellow-100 text-yellow-700" },
+    { name: "Java", icon: <Code className="w-4 h-4" />, color: "bg-red-100 text-red-700" },
+    { name: "C++", icon: <Code className="w-4 h-4" />, color: "bg-purple-100 text-purple-700" },
+    { name: "HTML", icon: <Globe className="w-4 h-4" />, color: "bg-orange-100 text-orange-700" },
+    { name: "CSS", icon: <Palette className="w-4 h-4" />, color: "bg-pink-100 text-pink-700" },
+    { name: "C", icon: <Code className="w-4 h-4" />, color: "bg-gray-100 text-gray-700" },
+    { name: "Data Analytics", icon: <Database className="w-4 h-4" />, color: "bg-green-100 text-green-700" },
+    { name: "Project Management", icon: <Cog className="w-4 h-4" />, color: "bg-indigo-100 text-indigo-700" }
+  ];
+
+  const professionalSkills = [
+    { name: "Leadership", icon: <Users className="w-4 h-4" />, color: "bg-cyan-100 text-cyan-700" },
+    { name: "Communication", icon: <Target className="w-4 h-4" />, color: "bg-teal-100 text-teal-700" },
+    { name: "Confidence", icon: <Zap className="w-4 h-4" />, color: "bg-rose-100 text-rose-700" },
+    { name: "Empathy", icon: <Lightbulb className="w-4 h-4" />, color: "bg-violet-100 text-violet-700" },
+    { name: "Multitasking", icon: <Cog className="w-4 h-4" />, color: "bg-fuchsia-100 text-fuchsia-700" },
+    { name: "Time Management", icon: <Clock className="w-4 h-4" />, color: "bg-sky-100 text-sky-700" },
+    { name: "Teamwork", icon: <Users className="w-4 h-4" />, color: "bg-emerald-100 text-emerald-700" },
+    { name: "Problem-Solving", icon: <Brain className="w-4 h-4" />, color: "bg-amber-100 text-amber-700" }
+  ];
+
   const linkedInUrl = "https://www.linkedin.com/in/tanvi-bokade-3817681b0";
 
   return (
-    <section id="about" className="py-20 px-6 bg-gradient-to-br from-cream-50 via-orange-25 to-pink-50">
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-pink-700 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent">
             About Tanvi
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <Card className="border-0 bg-white/80 shadow-xl border border-pink-200/50">
+            <Card className="border-0 bg-white/90 shadow-lg border border-purple-100/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-800">Her Journey</CardTitle>
                 <CardDescription className="text-gray-600">
@@ -61,7 +83,7 @@ const AboutSection = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-pink-600 hover:bg-pink-700 text-white font-bold">
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white font-bold">
                     <Linkedin className="mr-2" size={16} />
                     Connect with her
                   </Button>
@@ -69,18 +91,18 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 bg-white/80 shadow-xl border border-purple-200/50">
+            <Card className="border-0 bg-white/90 shadow-lg border border-pink-100/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-xl text-gray-800">Core Values</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                     Innovation-driven approach
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
                     Collaborative teamwork
                   </li>
                   <li className="flex items-center gap-2">
@@ -97,22 +119,55 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-6">
-            {/* Interactive Skills Constellation */}
-            <Card className="border-0 bg-white/90 shadow-xl border border-gray-200/50">
+            {/* Skills Grid */}
+            <Card className="border-0 bg-white/90 shadow-lg border border-gray-100/50 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-800">Skills Constellation</CardTitle>
+                <CardTitle className="text-xl text-gray-800">Technical Skills</CardTitle>
                 <CardDescription className="text-gray-600">
-                  Interactive network showing how expertise connects and flows
+                  Programming languages and tools I work with
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <SkillsConstellation />
+                <div className="grid grid-cols-3 gap-3">
+                  {technicalSkills.map((skill, index) => (
+                    <Badge 
+                      key={index} 
+                      className={`${skill.color} hover:scale-105 transition-transform font-semibold flex items-center justify-center gap-1 p-3 text-xs`}
+                    >
+                      {skill.icon}
+                      <span className="hidden sm:inline">{skill.name}</span>
+                      <span className="sm:hidden">{skill.name.split(' ')[0]}</span>
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 bg-white/90 shadow-lg border border-gray-100/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-xl text-gray-800">Professional Skills</CardTitle>
+                <CardDescription className="text-gray-600">
+                  Soft skills that drive collaboration and success
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-3">
+                  {professionalSkills.map((skill, index) => (
+                    <Badge 
+                      key={index} 
+                      className={`${skill.color} hover:scale-105 transition-transform font-semibold flex items-center gap-2 p-3 text-xs`}
+                    >
+                      {skill.icon}
+                      {skill.name}
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
             </Card>
 
             {/* Tools as Superpowers */}
             <div className="grid grid-cols-1 gap-4">
-              <Card className="border-0 bg-white/80 shadow-xl border border-green-200/50">
+              <Card className="border-0 bg-white/90 shadow-lg border border-green-100/50 backdrop-blur-sm">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg text-gray-800 flex items-center gap-2">
                     <Zap className="w-5 h-5 text-green-600" />
@@ -131,7 +186,7 @@ const AboutSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-white/80 shadow-xl border border-yellow-200/50">
+              <Card className="border-0 bg-white/90 shadow-lg border border-yellow-100/50 backdrop-blur-sm">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg text-gray-800 flex items-center gap-2">
                     <Cog className="w-5 h-5 text-yellow-600" />
@@ -150,7 +205,7 @@ const AboutSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-white/80 shadow-xl border border-blue-200/50">
+              <Card className="border-0 bg-white/90 shadow-lg border border-blue-100/50 backdrop-blur-sm">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg text-gray-800 flex items-center gap-2">
                     <Telescope className="w-5 h-5 text-blue-600" />

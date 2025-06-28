@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,20 +14,62 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
+      {/* Decorative Doodles */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Star doodles */}
+        <div className="absolute top-20 left-10 w-8 h-8 text-yellow-400">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div className="absolute top-40 right-20 w-6 h-6 text-pink-300">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-40 left-20 w-10 h-10 text-orange-300">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        
+        {/* Circle doodles */}
+        <div className="absolute top-60 left-5 w-12 h-12 border-4 border-purple-200 rounded-full"></div>
+        <div className="absolute top-80 right-10 w-8 h-8 border-3 border-pink-200 rounded-full"></div>
+        <div className="absolute bottom-60 right-5 w-16 h-16 border-4 border-yellow-200 rounded-full"></div>
+        
+        {/* Squiggly lines */}
+        <svg className="absolute top-32 right-32 w-20 h-12 text-purple-200" viewBox="0 0 80 48">
+          <path d="M5 24 Q20 5 35 24 T65 24" stroke="currentColor" strokeWidth="3" fill="none"/>
+        </svg>
+        <svg className="absolute bottom-32 left-32 w-24 h-16 text-pink-200" viewBox="0 0 96 64">
+          <path d="M5 32 Q25 10 45 32 T85 32" stroke="currentColor" strokeWidth="3" fill="none"/>
+        </svg>
+        
+        {/* Dots pattern */}
+        <div className="absolute top-96 left-40">
+          <div className="grid grid-cols-3 gap-2">
+            <div className="w-2 h-2 bg-orange-300 rounded-full"></div>
+            <div className="w-2 h-2 bg-pink-300 rounded-full"></div>
+            <div className="w-2 h-2 bg-purple-300 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-md border-b border-purple-500/30 z-50">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-orange-200/50 z-50 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
               Tanvi Bokade
             </div>
             <div className="flex gap-6">
-              <button onClick={() => scrollToSection('about')} className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-purple-500/20 transition-colors text-white">
+              <button onClick={() => scrollToSection('about')} className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-purple-100/50 transition-colors text-gray-700">
                 <User size={18} />
                 About
               </button>
-              <button onClick={() => scrollToSection('portfolio')} className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-purple-500/20 transition-colors text-white">
+              <button onClick={() => scrollToSection('portfolio')} className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-purple-100/50 transition-colors text-gray-700">
                 <Briefcase size={18} />
                 Portfolio
               </button>
@@ -42,7 +83,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <div className="relative flex flex-col items-center mb-8">
             <div className="mb-8">
@@ -91,19 +132,19 @@ const Index = () => {
       <PortfolioSection />
 
       {/* Footer */}
-      <footer className="bg-black text-white py-12 border-t border-purple-500/30">
+      <footer className="bg-white/80 backdrop-blur-sm text-gray-800 py-12 border-t border-purple-200/50 relative z-10">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-2xl font-semibold mb-4 text-pink-400">Let's Build Something Extraordinary Together</h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-semibold mb-4 text-purple-700">Let's Build Something Extraordinary Together</h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Ready to collaborate on your next big idea? I'm always excited to work with passionate teams 
             and individuals who want to create meaningful impact through innovative solutions.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="mailto:your.email@example.com" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 px-6 py-3 rounded-lg transition-colors font-bold">
+            <a href="mailto:your.email@example.com" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-lg transition-colors font-bold text-white">
               Start a Conversation
             </a>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-700 text-gray-400 text-sm">
+          <div className="mt-8 pt-8 border-t border-gray-300 text-gray-500 text-sm">
             © 2024 Tanvi Bokade. All rights reserved.
           </div>
         </div>
