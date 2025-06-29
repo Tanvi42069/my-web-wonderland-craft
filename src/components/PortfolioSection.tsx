@@ -11,7 +11,6 @@ import {
   ExternalLink,
   FolderOpen,
   GraduationCap,
-  Certificate,
   BookOpen
 } from "lucide-react";
 
@@ -167,7 +166,7 @@ const PortfolioSection = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                    <Certificate className="w-5 h-5 text-green-600" />
+                    <Award className="w-5 h-5 text-green-600" />
                     Certifications
                   </h3>
                   <a 
@@ -278,10 +277,7 @@ const PortfolioSection = () => {
             <CardContent className="space-y-6">
               <div className="prose max-w-none">
                 <p className="text-gray-700 leading-relaxed text-sm mb-6">
-                  Tanvi Bokade has consistently demonstrated strong leadership, teamwork, and collaboration across a wide range of extracurricular roles. As a Founding Member and Event Management Lead of the JAVA BREWERS Club and the NSS Secretary of the MIT IMPACT Student Council, she has successfully led diverse teams, organized impactful events, and driven initiatives aligned with community goals. Her contributions as a Design & Marketing Member at Geeks for Geeks, Technical Member at ACES, and Design & Support Member of the Cyber Security & Blockchain Club highlight her ability to work across functions and support multidisciplinary teams.
-                </p>
-                <p className="text-gray-700 leading-relaxed text-sm">
-                  Beyond leadership, Tanvi has represented MIT ADT University at prestigious platforms such as the 38th West Zone Youth Festival and the National Environmental Youth Parliament auditions. She has anchored major university events, presented to the NAAC Peer Team, and created viral digital content for flagship occasions like VSM, Spectra, and Shiv Jayanti. Her experiences reflect a deep commitment to collaboration, communication, and inspiring those around her.
+                  Tanvi Bokade is a dynamic student leader known for her strong collaboration, leadership, and communication skills. As the Founding Member and Event Lead of JAVA BREWERS and NSS Secretary of MIT IMPACT, she has led impactful initiatives and events. Her cross-functional work with Geeks for Geeks, ACES, and the Cyber Security & Blockchain Club showcases her versatility. Tanvi has also represented MIT ADT at the 38th West Zone Youth Festival, anchored major events, and created viral digital content, reflecting her commitment to community, creativity, and teamwork.
                 </p>
               </div>
               

@@ -15,7 +15,7 @@ const Index = () => {
   };
 
   return <div className="min-h-screen relative overflow-hidden" style={{
-    backgroundImage: `url('/lovable-uploads/ca9525cf-8121-4d92-9ce2-eacc0d28b894.png')`,
+    backgroundImage: `url('/lovable-uploads/abe6b2fd-bef7-4a31-a41b-745aeac05b38.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
