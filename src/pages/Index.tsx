@@ -103,7 +103,7 @@ const Index = () => {
             and individuals who want to create meaningful impact through innovative solutions.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="mailto:your.email@example.com" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-lg transition-colors font-bold text-white">
+            <a href="mailto:tanvi.bokade@gmail.com" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-lg transition-colors font-bold text-white">
               Start a Conversation
             </a>
           </div>
