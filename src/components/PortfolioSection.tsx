@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -97,23 +98,6 @@ const PortfolioSection = () => {
       description: "Electoral literacy campaign to promote democratic participation and voter awareness",
       impact: "Electoral awareness",
       link: "https://www.linkedin.com/posts/tanvi-bokade-3817681b0_nss-electoralliteracy-voteforindia-activity-7316288661585600512-LZ4V?utm_source=share&utm_medium=member_desktop&rcm=ACoAADE78hEBujZ2nX25WAjGp6sI2acFsZJ4YZA"
-    }
-  ];
-
-  const otherSocialService = [
-    {
-      title: "Community Tech Mentor",
-      organization: "Local Coding Bootcamp",
-      period: "2023 - Present",
-      description: "Mentoring aspiring developers and helping them build their first projects",
-      impact: "25+ students guided"
-    },
-    {
-      title: "Digital Literacy Volunteer",
-      organization: "Community Center",
-      period: "2022 - 2023",
-      description: "Teaching basic computer skills to seniors and underserved communities",
-      impact: "100+ people trained"
     }
   ];
 
@@ -283,11 +267,11 @@ const PortfolioSection = () => {
               
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="text-center p-4 bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg">
-                  <div className="text-2xl font-bold text-pink-600">15+</div>
+                  <div className="text-2xl font-bold text-pink-600">10+</div>
                   <div className="text-sm text-gray-600">Projects Led</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600">50+</div>
+                  <div className="text-2xl font-bold text-purple-600">30+</div>
                   <div className="text-sm text-gray-600">Team Members</div>
                 </div>
               </div>
@@ -299,11 +283,11 @@ const PortfolioSection = () => {
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
                   <Star className="w-5 h-5 text-purple-600" />
-                  <span className="text-gray-700 text-sm">Agile project management</span>
+                  <span className="text-gray-700 text-sm">Mentoring & Team Development</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <Star className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700 text-sm">Stakeholder communication</span>
+                  <span className="text-gray-700 text-sm">Conflict Resolution</span>
                 </div>
               </div>
             </CardContent>
@@ -352,27 +336,6 @@ const PortfolioSection = () => {
                           <ExternalLink className="w-3 h-3" />
                           View Post
                         </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Other Social Service */}
-              <div className="pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Other Community Service</h3>
-                <div className="space-y-4">
-                  {otherSocialService.map((service, index) => (
-                    <div key={index} className="border border-blue-100 rounded-lg p-4 bg-blue-50/50">
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-semibold text-gray-800">{service.title}</h4>
-                        <Badge className="bg-blue-100 text-blue-700 text-xs">{service.impact}</Badge>
-                      </div>
-                      <p className="text-blue-700 font-medium text-sm mb-2">{service.organization}</p>
-                      <p className="text-gray-600 text-sm mb-2">{service.description}</p>
-                      <div className="flex items-center gap-1 text-xs text-gray-500">
-                        <Calendar className="w-3 h-3" />
-                        {service.period}
                       </div>
                     </div>
                   ))}
