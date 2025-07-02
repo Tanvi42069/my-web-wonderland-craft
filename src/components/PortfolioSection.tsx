@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,14 @@ import {
 
 const PortfolioSection = () => {
   const projects = [
+    {
+      title: "SOFTWARE SYSTEM TO PERFORM REAL TIME ANALYSIS FOR WOMEN'S SAFETY",
+      company: "Academic Project",
+      period: "2024",
+      location: "University",
+      description: "Real-time analysis software system designed to enhance women's safety through intelligent monitoring, threat detection, and emergency response mechanisms.",
+      skills: ["Real-time Analytics", "Safety Systems", "Machine Learning", "Emergency Response"]
+    },
     {
       title: "Netflix Discoverability Issue - Product Case Study",
       company: "Personal Project",
