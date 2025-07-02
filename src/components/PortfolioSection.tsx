@@ -12,26 +12,56 @@ import {
   ExternalLink,
   FolderOpen,
   GraduationCap,
-  BookOpen
+  BookOpen,
+  Github
 } from "lucide-react";
 
 const PortfolioSection = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "Netflix Discoverability Issue - Product Case Study",
       company: "Personal Project",
-      period: "2023 - Present",
+      period: "2024",
       location: "Remote",
-      description: "Built a full-stack e-commerce platform with modern web technologies and payment integration.",
-      skills: ["React", "Node.js", "MongoDB"]
+      description: "Comprehensive product case study analyzing Netflix's content discoverability challenges and proposing user-centric solutions.",
+      skills: ["Product Management", "UX Research", "Data Analysis"],
+      link: "https://github.com/Tanvi42069/Product-Case-Study-Netflix-Discoverability-Issue"
     },
     {
-      title: "Data Visualization Dashboard",
+      title: "Sign Language Model to Control System Volume",
       company: "Academic Project",
-      period: "2022 - 2023",
+      period: "2024",
       location: "University",
-      description: "Developed an interactive dashboard for analyzing and visualizing complex datasets.",
-      skills: ["Python", "D3.js", "PostgreSQL"]
+      description: "AI-powered system that recognizes sign language gestures to control computer volume, enhancing accessibility for the hearing-impaired community.",
+      skills: ["Machine Learning", "Computer Vision", "Python"],
+      link: "https://github.com/Tanvi42069/Sign-Language-Model-to-Control-System-Volume"
+    },
+    {
+      title: "Sign Language Translator",
+      company: "Personal Project",
+      period: "2024",
+      location: "Remote",
+      description: "Machine learning application that translates sign language into text, bridging communication gaps and promoting inclusivity.",
+      skills: ["Deep Learning", "OpenCV", "TensorFlow"],
+      link: "https://github.com/Tanvi42069/Sign-Language-Translator"
+    },
+    {
+      title: "Fraud Detection System",
+      company: "Academic Project",
+      period: "2023",
+      location: "University",
+      description: "Advanced fraud detection system using machine learning algorithms to identify and prevent fraudulent transactions in real-time.",
+      skills: ["Machine Learning", "Data Science", "Python"],
+      link: "https://github.com/Tanvi42069/Fraud-Detection"
+    },
+    {
+      title: "Additional Project Documentation",
+      company: "Portfolio",
+      period: "2023-2024",
+      location: "Various",
+      description: "Comprehensive documentation and portfolio showcasing various technical projects and implementations.",
+      skills: ["Documentation", "Project Management", "Technical Writing"],
+      link: "https://drive.google.com/file/d/1I9KDq2Fb49kz7_em_F-TWl73auOmayqu/view"
     }
   ];
 
@@ -233,13 +263,22 @@ const PortfolioSection = () => {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-3 text-sm leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {project.skills.map((skill, skillIndex) => (
                       <Badge key={skillIndex} className="bg-purple-100 text-purple-700 text-xs">
                         {skill}
                       </Badge>
                     ))}
                   </div>
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
+                  >
+                    {project.link.includes('github.com') ? <Github className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
+                    {project.link.includes('github.com') ? 'View on GitHub' : 'View Project'}
+                  </a>
                 </div>
               ))}
             </CardContent>
