@@ -13,9 +13,9 @@ export function OceanFloor({ scrollProgress }: OceanFloorProps) {
 
   useFrame((state) => {
     if (materialRef.current) {
-      // Animated ocean floor with waves
+      // Animated ocean floor with waves - removed displacementScale
       const time = state.clock.elapsedTime;
-      materialRef.current.displacementScale = 2 + Math.sin(time * 0.5) * 0.5;
+      // materialRef.current.displacementScale = 2 + Math.sin(time * 0.5) * 0.5;
       
       // Color transition based on depth
       const deepColor = new THREE.Color('#0f0f23');
