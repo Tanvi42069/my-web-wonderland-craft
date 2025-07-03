@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Sphere, Box, Torus, Octahedron } from '@react-three/drei';
+import { Sphere, Box, Torus, Octahedron, Icosahedron } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface FloatingElementsProps {
@@ -19,17 +19,17 @@ function FloatingOrb({ position, scale, color, speed }: {
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x += speed * 0.01;
-      meshRef.current.rotation.y += speed * 0.015;
+      meshRef.current.rotation.x += speed * 0.008;
+      meshRef.current.rotation.y += speed * 0.012;
       
-      // Floating motion
-      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed) * 0.5;
-      meshRef.current.position.x = position[0] + Math.cos(state.clock.elapsedTime * speed * 0.5) * 0.3;
+      // Gentle floating motion
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed) * 0.3;
+      meshRef.current.position.x = position[0] + Math.cos(state.clock.elapsedTime * speed * 0.7) * 0.2;
     }
 
     if (materialRef.current) {
-      // Pulsing emission
-      const intensity = 0.5 + Math.sin(state.clock.elapsedTime * speed * 2) * 0.3;
+      // Subtle pulsing emission
+      const intensity = 0.2 + Math.sin(state.clock.elapsedTime * speed * 1.5) * 0.1;
       materialRef.current.emissiveIntensity = intensity;
     }
   });
@@ -40,17 +40,17 @@ function FloatingOrb({ position, scale, color, speed }: {
         ref={materialRef}
         color={color}
         emissive={color}
-        emissiveIntensity={0.5}
-        roughness={0.2}
-        metalness={0.8}
+        emissiveIntensity={0.2}
+        roughness={0.1}
+        metalness={0.9}
         transparent
-        opacity={0.8}
+        opacity={0.9}
       />
     </Sphere>
   );
 }
 
-function FloatingCrystal({ position, scale, color, speed }: {
+function FloatingCube({ position, scale, color, speed }: {
   position: [number, number, number];
   scale: number;
   color: string;
@@ -60,27 +60,62 @@ function FloatingCrystal({ position, scale, color, speed }: {
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x += speed * 0.008;
-      meshRef.current.rotation.y += speed * 0.012;
-      meshRef.current.rotation.z += speed * 0.005;
+      meshRef.current.rotation.x += speed * 0.006;
+      meshRef.current.rotation.y += speed * 0.009;
+      meshRef.current.rotation.z += speed * 0.004;
       
       // Floating motion
-      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed + 1) * 0.8;
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed + 1) * 0.4;
+      meshRef.current.position.z = position[2] + Math.cos(state.clock.elapsedTime * speed * 0.8) * 0.3;
     }
   });
 
   return (
-    <Octahedron ref={meshRef} position={position} scale={scale}>
+    <Box ref={meshRef} position={position} scale={scale}>
       <meshStandardMaterial
         color={color}
         emissive={color}
-        emissiveIntensity={0.3}
-        roughness={0.1}
-        metalness={0.9}
+        emissiveIntensity={0.15}
+        roughness={0.2}
+        metalness={0.8}
         transparent
-        opacity={0.7}
+        opacity={0.85}
       />
-    </Octahedron>
+    </Box>
+  );
+}
+
+function FloatingIcosahedron({ position, scale, color, speed }: {
+  position: [number, number, number];
+  scale: number;
+  color: string;
+  speed: number;
+}) {
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += speed * 0.005;
+      meshRef.current.rotation.y += speed * 0.008;
+      
+      // Complex floating pattern
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed + 2) * 0.5;
+      meshRef.current.position.x = position[0] + Math.cos(state.clock.elapsedTime * speed * 0.6) * 0.25;
+    }
+  });
+
+  return (
+    <Icosahedron ref={meshRef} position={position} scale={scale}>
+      <meshStandardMaterial
+        color={color}
+        emissive={color}
+        emissiveIntensity={0.25}
+        roughness={0.15}
+        metalness={0.85}
+        transparent
+        opacity={0.8}
+      />
+    </Icosahedron>
   );
 }
 
@@ -94,25 +129,25 @@ function FloatingRing({ position, scale, color, speed }: {
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x += speed * 0.01;
-      meshRef.current.rotation.z += speed * 0.008;
+      meshRef.current.rotation.x += speed * 0.007;
+      meshRef.current.rotation.z += speed * 0.005;
       
-      // Floating motion
+      // Orbital motion
       meshRef.current.position.y = position[1] + Math.cos(state.clock.elapsedTime * speed + 2) * 0.6;
-      meshRef.current.position.z = position[2] + Math.sin(state.clock.elapsedTime * speed * 0.3) * 0.4;
+      meshRef.current.position.z = position[2] + Math.sin(state.clock.elapsedTime * speed * 0.4) * 0.4;
     }
   });
 
   return (
-    <Torus ref={meshRef} position={position} scale={scale} args={[1, 0.3, 16, 32]}>
+    <Torus ref={meshRef} position={position} scale={scale} args={[1, 0.25, 16, 32]}>
       <meshStandardMaterial
         color={color}
         emissive={color}
-        emissiveIntensity={0.4}
-        roughness={0.3}
-        metalness={0.7}
+        emissiveIntensity={0.3}
+        roughness={0.1}
+        metalness={0.9}
         transparent
-        opacity={0.6}
+        opacity={0.7}
       />
     </Torus>
   );
@@ -120,37 +155,49 @@ function FloatingRing({ position, scale, color, speed }: {
 
 export function FloatingElements({ scrollProgress, mousePosition }: FloatingElementsProps) {
   const elements = useMemo(() => [
-    // Orbs
-    { type: 'orb', position: [-8, 5, -5] as [number, number, number], scale: 0.8, color: '#667eea', speed: 1.2 },
-    { type: 'orb', position: [6, 8, -8] as [number, number, number], scale: 1.2, color: '#f093fb', speed: 0.8 },
-    { type: 'orb', position: [-4, -2, -12] as [number, number, number], scale: 0.6, color: '#f5576c', speed: 1.5 },
-    { type: 'orb', position: [10, -5, -15] as [number, number, number], scale: 1.0, color: '#4facfe', speed: 1.0 },
+    // Sophisticated color palette inspired by Alma Digital
+    // Orbs - primary elements
+    { type: 'orb', position: [-6, 4, -4] as [number, number, number], scale: 0.6, color: '#6366f1', speed: 1.0 },
+    { type: 'orb', position: [8, 6, -7] as [number, number, number], scale: 0.8, color: '#8b5cf6', speed: 0.8 },
+    { type: 'orb', position: [-4, -3, -10] as [number, number, number], scale: 0.5, color: '#06b6d4', speed: 1.2 },
+    { type: 'orb', position: [10, -4, -12] as [number, number, number], scale: 0.7, color: '#10b981', speed: 0.9 },
     
-    // Crystals
-    { type: 'crystal', position: [8, 3, -10] as [number, number, number], scale: 1.5, color: '#764ba2', speed: 0.9 },
-    { type: 'crystal', position: [-6, -8, -18] as [number, number, number], scale: 1.8, color: '#667eea', speed: 0.7 },
-    { type: 'crystal', position: [4, -12, -25] as [number, number, number], scale: 2.0, color: '#f093fb', speed: 0.6 },
+    // Cubes - geometric elements
+    { type: 'cube', position: [5, 2, -6] as [number, number, number], scale: 0.8, color: '#f59e0b', speed: 0.7 },
+    { type: 'cube', position: [-8, -6, -14] as [number, number, number], scale: 1.0, color: '#ef4444', speed: 0.6 },
+    { type: 'cube', position: [6, -8, -18] as [number, number, number], scale: 1.2, color: '#8b5cf6', speed: 0.5 },
     
-    // Rings
-    { type: 'ring', position: [-10, 0, -8] as [number, number, number], scale: 1.2, color: '#00f2fe', speed: 1.1 },
-    { type: 'ring', position: [12, -10, -20] as [number, number, number], scale: 1.6, color: '#4facfe', speed: 0.8 },
-    { type: 'ring', position: [-8, -15, -30] as [number, number, number], scale: 2.2, color: '#43e97b', speed: 0.5 },
+    // Icosahedrons - complex geometry
+    { type: 'icosahedron', position: [-10, 1, -8] as [number, number, number], scale: 1.0, color: '#06b6d4', speed: 0.8 },
+    { type: 'icosahedron', position: [12, -6, -16] as [number, number, number], scale: 1.3, color: '#6366f1', speed: 0.6 },
+    { type: 'icosahedron', position: [-6, -12, -22] as [number, number, number], scale: 1.5, color: '#10b981', speed: 0.4 },
+    
+    // Rings - elegant accents
+    { type: 'ring', position: [-12, 3, -5] as [number, number, number], scale: 1.0, color: '#f59e0b', speed: 1.1 },
+    { type: 'ring', position: [14, -2, -11] as [number, number, number], scale: 1.4, color: '#ef4444', speed: 0.7 },
+    { type: 'ring', position: [-8, -10, -20] as [number, number, number], scale: 1.8, color: '#8b5cf6', speed: 0.5 },
+    { type: 'ring', position: [10, -14, -26] as [number, number, number], scale: 2.0, color: '#06b6d4', speed: 0.4 },
   ], []);
 
   return (
     <group>
       {elements.map((element, index) => {
-        // Adjust visibility and position based on scroll progress
-        const depthFactor = (element.position[2] + 35) / 35; // Normalize depth
-        const shouldShow = scrollProgress >= depthFactor * 0.3;
+        // Progressive reveal based on scroll depth
+        const depthFactor = Math.abs(element.position[2]) / 30;
+        const shouldShow = scrollProgress >= depthFactor * 0.2;
         
         if (!shouldShow) return null;
 
+        // Subtle mouse interaction
         const adjustedPosition: [number, number, number] = [
-          element.position[0] + mousePosition.x * 2,
-          element.position[1] + mousePosition.y * 1,
+          element.position[0] + mousePosition.x * 1.5,
+          element.position[1] + mousePosition.y * 0.8,
           element.position[2]
         ];
+
+        // Scale based on scroll progress for depth effect
+        const scaleMultiplier = 1 + scrollProgress * 0.3;
+        const adjustedScale = element.scale * scaleMultiplier;
 
         switch (element.type) {
           case 'orb':
@@ -158,17 +205,27 @@ export function FloatingElements({ scrollProgress, mousePosition }: FloatingElem
               <FloatingOrb
                 key={index}
                 position={adjustedPosition}
-                scale={element.scale}
+                scale={adjustedScale}
                 color={element.color}
                 speed={element.speed}
               />
             );
-          case 'crystal':
+          case 'cube':
             return (
-              <FloatingCrystal
+              <FloatingCube
                 key={index}
                 position={adjustedPosition}
-                scale={element.scale}
+                scale={adjustedScale}
+                color={element.color}
+                speed={element.speed}
+              />
+            );
+          case 'icosahedron':
+            return (
+              <FloatingIcosahedron
+                key={index}
+                position={adjustedPosition}
+                scale={adjustedScale}
                 color={element.color}
                 speed={element.speed}
               />
@@ -178,7 +235,7 @@ export function FloatingElements({ scrollProgress, mousePosition }: FloatingElem
               <FloatingRing
                 key={index}
                 position={adjustedPosition}
-                scale={element.scale}
+                scale={adjustedScale}
                 color={element.color}
                 speed={element.speed}
               />
