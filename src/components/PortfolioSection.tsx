@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,15 @@ import {
 
 const PortfolioSection = () => {
   const projects = [
+    {
+      title: "Spotify Personalized Playlist - Product Teardown",
+      company: "Personal Project",
+      period: "2024",
+      location: "Remote",
+      description: "Comprehensive product teardown analyzing Spotify's personalized playlist feature, examining user experience, algorithmic recommendations, and interface design.",
+      skills: ["Product Analysis", "UX Research", "Product Strategy"],
+      link: "https://github.com/Tanvi42069/Product-Teardown-Spotify-Personalized-Playlist"
+    },
     {
       title: "Netflix Discoverability Issue - Product Case Study",
       company: "Personal Project",
