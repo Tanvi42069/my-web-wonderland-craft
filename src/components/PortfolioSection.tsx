@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -63,12 +64,12 @@ const PortfolioSection = () => {
       link: "https://github.com/Tanvi42069/Fraud-Detection"
     },
     {
-      title: "Additional Project Documentation",
-      company: "Portfolio",
+      title: "Real-Time Women Safety Monitoring System",
+      company: "Research Paper",
       period: "2023-2024",
-      location: "Various",
-      description: "Comprehensive documentation and portfolio showcasing various technical projects and implementations.",
-      skills: ["Documentation", "Project Management", "Technical Writing"],
+      location: "University",
+      description: "Research paper documenting a comprehensive real-time monitoring system designed to enhance women's safety through innovative technology solutions.",
+      skills: ["Research", "System Design", "Safety Technology"],
       link: "https://drive.google.com/file/d/1I9KDq2Fb49kz7_em_F-TWl73auOmayqu/view"
     }
   ];
@@ -247,8 +248,17 @@ const PortfolioSection = () => {
                 <FolderOpen className="w-6 h-6 text-purple-600" />
                 Projects
               </CardTitle>
-              <CardDescription className="text-gray-600">
-                Building impactful solutions through innovation
+              <CardDescription className="text-gray-600 flex items-center justify-between">
+                <span>Building impactful solutions through innovation</span>
+                <a 
+                  href="https://github.com/Tanvi42069?tab=repositories" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
+                >
+                  <Github className="w-4 h-4" />
+                  View All My Work
+                </a>
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
