@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -74,12 +73,10 @@ const Index = () => {
           </div>
           
           <div className="flex justify-center gap-4">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-3 font-bold">
-                <Github className="mr-2" size={20} />
-                View My Work
-              </Button>
-            </a>
+            <Button onClick={() => scrollToSection('portfolio')} size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-3 font-bold">
+              <Folder className="mr-2" size={20} />
+              View My Work
+            </Button>
             <Button onClick={() => scrollToSection('about')} variant="outline" size="lg" className="px-8 py-3 border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold">
               <User className="mr-2" size={20} />
               Learn More About Me
