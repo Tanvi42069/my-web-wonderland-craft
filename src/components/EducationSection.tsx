@@ -8,21 +8,21 @@ const EducationSection = () => {
       institution: "MIT Art, Design and Technology University, Pune",
       degree: "Bachelor of Technology – Computer Science and Engineering",
       score: "CGPA: 8.97",
-      period: "2021 - 2025",
+      period: "2022 - 2026",
       color: "from-purple-500 to-pink-500"
     },
     {
       institution: "Pace Junior College, Mumbai",
       degree: "HSC – Science and Mathematics",
       score: "Percentage: 74.67%",
-      period: "2019 - 2021",
+      period: "2020 - 2022",
       color: "from-blue-500 to-purple-500"
     },
     {
       institution: "Lokhandwala Foundation School, Mumbai",
       degree: "ICSE",
       score: "Percentage: 97.67%",
-      period: "2019",
+      period: "2019-2020",
       color: "from-green-500 to-blue-500"
     }
   ];
